@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html>
+	<head>
+		<title>Login</title>
+		<link href="./login.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		<div class="login">
+
+			<form action='login/' method='post'>
+				<label for="username">User name:</label>
+    				<input type="text" name="username" value="" id="username">
+    				<label for="password">Password:</label>
+    				<input type="password" name="password" value="" id="password">
+				<input type="checkbox" name="remember" class="box"/>remember me!</br>
+				<input type="submit" value="login" class="button confirm "/>
+				<input type="hidden" name="next" value = "{{next}}" />
+				<span class="hint" ><a href="#">Forget password?</span>
+			<form action='login/' method='post'>
+		</div>
+	</body>
+</html>

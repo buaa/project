@@ -1,0 +1,55 @@
+body{
+margin:0;
+padding:0;
+color:white; 
+}
+
+/**/
+.login{
+width:325px;
+height:180px;
+margin-top:170px;
+margin-left:400px;
+background-color:RGB(51,51,51);
+border:1px solid RGB(51,51,51);
+padding:0;
+}
+
+.form{
+margin-top:18px;
+margin-left:28px;
+}
+
+/**/
+.button{
+width:55px;
+height:25px;
+}
+
+.username{
+margin-bottom:15px;
+}
+
+.password{
+margin-bottom:5px;
+}
+
+.username, .password{
+width:180px;
+height:25px;
+}
+
+.box, .confirm, .hint{
+margin-left:57px;
+margin-bottom:7px;
+}
+
+.hint a:link{
+color:white;
+text-decoration:none;
+}
+
+.hint a:hover{
+color:white;
+text-decoration:underline;
+}
