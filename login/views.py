@@ -1,4 +1,3 @@
-# Create your views here.
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.contrib.auth import *
@@ -11,11 +10,14 @@ def login_form(request):
      next = request.GET['next']
      return render_to_response('registration/login.html', {'next': next})
 
+
+
 #the destination of form's submition
 def my_login(request):
     username = request.POST['username']
     password = request.POST['password']
     user = authenticate(username=username, password=password)
+    
     if user is not None:
         if user.is_active:
             login(request,user)

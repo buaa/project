@@ -27,10 +27,19 @@ DATABASES = {
         'PASSWORD': '',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
-    }
+    },
 
+    'monitorcache': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'monitorcache',                      # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '3306',                      # Set to empty string for default.
+    }
 }
-DATABASE_ROUTERS = ['project.monitor_router.monitor_router']
+DATABASE_ROUTERS = ['project.monitor_router.monitor_router','project.monitorcache_router.monitorcache_router']
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -130,6 +139,7 @@ INSTALLED_APPS = (
     'userprofile',
     'login',
     'monitor',
+    'monitorcache',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
